@@ -1,7 +1,8 @@
 import { Modal, View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useState } from 'react';
 
-const BACKEND_URL = 'http://192.168.8.125:3000';
+
+const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL//'http://192.168.8.125:3000';
 
 export default function NewInvestmentModal({ visible, onClose, onAdd }: any) {
   const [farmer_name, setName] = useState('');
