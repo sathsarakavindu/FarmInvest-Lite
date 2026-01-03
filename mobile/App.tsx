@@ -12,7 +12,9 @@ import {
 import InvestmentItem from './components/InvestmentItem';
 import NewInvestmentModal from './components/NewInvestmentModal';
 
-const BACKEND_URL = 'http://192.168.8.125:3000';
+
+
+const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
 export default function App() {
   const [data, setData] = useState<any[]>([]);

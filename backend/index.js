@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
@@ -41,5 +42,6 @@ res.status(500).json({ message: 'Server error' });
 }
 });
 
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => console.log('Backend running on port 3000'));
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
